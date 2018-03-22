@@ -19,7 +19,15 @@ public class Datos{
 	private boolean workingDay;
 	private int rol; 
 	private String password;
-
+	/**
+	 * @param name : Nombre del usuario
+	 * @param lastName : Apellido del usuario
+	 * @param semester : Numero de semestre actual(semester > 0)
+	 * @param registered : Esta matriculado o no 
+	 * @param workingDay : Jornada (True: dia, False, noche)
+	 * @param rol : Rol dentro de la universidad (0 <= rol <= 2)
+	 * @param password : Contraseña
+	 */
 	public Datos(String name, String lastName, int semester, boolean registered, boolean workingDay, int rol, String password) {
 		this.name = name.toLowerCase();
 		this.lastName = lastName.toLowerCase();
@@ -29,7 +37,7 @@ public class Datos{
 		this.workingDay = workingDay;
 		if(rol >= 0 && rol <= 2) this.rol = rol;
 		else this.rol = 0;
-		this.password = password;
+		this.password = decod(password);
 	}
 
 	public String getName() {
@@ -58,5 +66,20 @@ public class Datos{
 
 	public String getPasswordd() {
 		return password;
+	}
+	/**
+	 * @category Decodifica la clave para mayor seguridad
+	 * @param clave : ingresada por el usuario
+	 * @return Clave decodificadad
+	 */
+	private static String decod(String clave){
+		char [] c = clave.toCharArray();
+		int [] cAn = new int[c.length];//De char a int
+		char [] nAc = new char [cAn.length];//De int a char
+		for (int i = 0; i < c.length; i++) {
+			cAn[i]=c[cAn.length-i-1]+2;
+			nAc[i]=(char)cAn[i];
+		}
+		return new String(nAc);
 	}
 }

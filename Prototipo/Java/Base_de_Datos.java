@@ -1,7 +1,6 @@
 import java.util.*;
 /**
  * @category Esta clase es una Base de datos provisional
- *
  */
 public class Base_de_Datos {
 	/**
@@ -11,7 +10,9 @@ public class Base_de_Datos {
 	 * Como Value contiene un arreglo de Strings los cules van a representar el nombre, apellido, semestre, matriculado, jornada
 	 */
 	private Map<String, Datos> datos; 
-	
+	/**
+	 * @category Se inicializa la base de datos con unos usuarios iniciales
+	 */
 	public Base_de_Datos() {
 		datos = new TreeMap<>();
 		datos.put("1520010900", new Datos("user", "01", 6, true, false, 0, "543"));
@@ -29,6 +30,7 @@ public class Base_de_Datos {
 		datos.put("1520010912", new Datos("user", "13", 1, true, true, 1, "543"));
 	}
 	/**
+	 * @category Verificar si el estudiante existe en la base de datos
 	 * @param code : Codigo de estudiante
 	 * @return Si el estudiante existe en la base de datos
 	 */
@@ -36,6 +38,7 @@ public class Base_de_Datos {
 		return datos.containsKey(code);
 	}
 	/**
+	 * @category Obtener los datos de un estudiante
 	 * @param code : Codigo de estudiante
 	 * @return Datos del estudiante
 	 */
@@ -43,6 +46,7 @@ public class Base_de_Datos {
 		return datos.get(code);
 	}
 	/**
+	 * @category Agregar un nuevo estudiante
 	 * @param cd : Codigo de estudiante
 	 * @param dt : Datos a agregar
 	 */
@@ -51,6 +55,7 @@ public class Base_de_Datos {
 		else datos.put(cd, dt);
 	}
     /**
+     * @category Modificar un estudiante
      * @param cd : Codigo de estudiante
      * @param dt : Datos a modificar
       * @return Si fue posible su modificacion

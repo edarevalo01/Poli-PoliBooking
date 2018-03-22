@@ -51,7 +51,7 @@ public class Princ {
 		return true;
 	}
 
-	public static String decod(String clave){
+	private static String decod(String clave){
 		char [] c = clave.toCharArray();
 		int [] cAn = new int[c.length];//De char a int
 		char [] nAc = new char [cAn.length];//De int a char

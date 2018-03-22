@@ -97,21 +97,21 @@ public class Servicios {
 		else return "No ha solicitado ningun servicio";
 	}
 
-	public void asignBG(String code) {
+	private void asignBG(String code) {
 		biblioteca[cubGrandes][0] = 1;
 		biblioteca[cubGrandes][1] = Long.parseLong(code);
 		solicitudB.put(code, cubGrandes);
 		cubGrandes++;
 	}
 	
-	public void asignB(String code) {
+	private void asignB(String code) {
 		biblioteca[indiceB][0] = 1;
 		biblioteca[indiceB][1] = Long.parseLong(code);
 		solicitudB.put(code, indiceB);
 		indiceB++;
 	}
 
-	public void asignG(String code) {
+	private void asignG(String code) {
 		gimnasio[indiceG][0] = 1;
 		gimnasio[indiceG][1] = Long.parseLong(code);
 		solicitudG.put(code, indiceG);
