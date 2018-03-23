@@ -1,5 +1,7 @@
 import java.io.*;
-
+/**
+*@author: Alejandro, Juan, Alfonso, Monica, Felipe
+*/
 public class Princ {
 
 	private static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
