@@ -9,25 +9,20 @@ public class Base_de_Datos {
 	 * Como Key contiene un tipo de dato String, el cuál será un número de 10 cifras (código estudiantil)
 	 * Como Value contiene un arreglo de Strings los cules van a representar el nombre, apellido, semestre, matriculado, jornada
 	 */
-	private Map<String, Datos> datos; 
+	private Map<String, Usuario> datos; 
 	/**
 	 * @category Se inicializa la base de datos con unos usuarios iniciales
 	 */
 	public Base_de_Datos() {
 		datos = new TreeMap<>();
-		datos.put("1520010900", new Datos("user", "01", 6, true, false, 0, "543"));
-		datos.put("1520010901", new Datos("user", "02", 6, true, true, 0, "543"));
-		datos.put("1520010902", new Datos("user", "03", 5, true, false, 0, "543"));
-		datos.put("1520010903", new Datos("user", "04", 7, true, false, 0, "543"));
-		datos.put("1520010904", new Datos("user", "05", 5, true, false, 0, "543"));
-		datos.put("1520010905", new Datos("user", "06", 5, true, false, 0, "543"));
-		datos.put("1520010906", new Datos("user", "07", 1, true, true, 2, "543"));
-		datos.put("1520010907", new Datos("user", "08", 0, true, true, 1, "543"));
-		datos.put("1520010908", new Datos("user", "09", 1, true, true, 1, "543"));
-		datos.put("1520010909", new Datos("user", "10", 1, true, true, 1, "543"));
-		datos.put("1520010910", new Datos("user", "11", 1, true, true, 1, "543"));
-		datos.put("1520010911", new Datos("user", "12", 1, true, true, 1, "543"));
-		datos.put("1520010912", new Datos("user", "13", 1, true, true, 1, "543"));
+		datos.put("1520010900", new Usuario("user","0","0000000000","0000000000","123","user0@gmail.com","1","0","dia","estudiante"));
+		datos.put("1520010901", new Usuario("user","1","0000000001","0000000001","123","user1@gmail.com","1","0","dia","estudiante"));
+		datos.put("1520010902", new Usuario("user","2","0000000002","0000000002","123","user2@gmail.com","1","0","dia","estudiante"));
+		datos.put("1520010903", new Usuario("user","3","0000000003","0000000003","123","user3@gmail.com","1","0","dia","estudiante"));
+		datos.put("1520010904", new Usuario("user","4","0000000004","0000000004","123","user4@gmail.com","1","0","dia","estudiante"));
+		datos.put("1520010905", new Usuario("user","5","0000000005","0000000005","123","user5@gmail.com","1","0","dia","estudiante"));
+		datos.put("1520010906", new Usuario("user","6","0000000006","0000000006","123","user6@gmail.com","1","0","dia","estudiante"));
+		datos.put("1520010907", new Usuario("user","7","0000000007","0000000007","123","user7@gmail.com","1","0","dia","estudiante"));
 	}
 	/**
 	 * @category Verificar si el estudiante existe en la base de datos
@@ -42,7 +37,7 @@ public class Base_de_Datos {
 	 * @param code : Codigo de estudiante
 	 * @return Datos del estudiante
 	 */
-	public Datos getDatos(String code) {
+	public Usuario getDatos(String code) {
 		return datos.get(code);
 	}
 	/**
@@ -50,7 +45,7 @@ public class Base_de_Datos {
 	 * @param cd : Codigo de estudiante
 	 * @param dt : Datos a agregar
 	 */
-	public void addDatos(String cd, Datos dt) {
+	public void addDatos(String cd, Usuario dt) {
 		if(datos.containsKey(cd)) System.out.println("Ya existe el usuario con codigo " + cd + ".");
 		else datos.put(cd, dt);
 	}
@@ -60,7 +55,7 @@ public class Base_de_Datos {
      * @param dt : Datos a modificar
       * @return Si fue posible su modificacion
      */
-	public boolean modify(String cd, Datos dt) {
+	public boolean modify(String cd, Usuario dt) {
 		if(datos.containsKey(cd)) datos.put(cd, dt);
 		else return false;
 		return true;

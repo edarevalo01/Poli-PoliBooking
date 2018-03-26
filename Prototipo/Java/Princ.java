@@ -1,13 +1,11 @@
 import java.io.*;
-/**
-*@author: Alejandro, Juan, Alfonso, Monica, Felipe
-*/
+
 public class Princ {
 
 	private static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	private static String code;
 	private static Base_de_Datos db;
-	private static Datos user;
+	private static Usuario user;
 	private static Servicios s = new Servicios();
 
 	public static void main(String[] args) throws Exception{
@@ -31,7 +29,7 @@ public class Princ {
 			code = in.readLine();
 		}
 		System.out.println("Usuario verificado, ingrese su contraseña (Intentos 3)");
-		String pass = db.getDatos(code).getPasswordd();
+		String pass = db.getDatos(code).getPassword();
 		String password = in.readLine().trim();
 		String temp = decod(password);
 		int cont = 0;
