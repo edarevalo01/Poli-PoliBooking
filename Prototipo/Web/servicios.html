@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Servicios - PoliBooking</title>
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/servicios.css">
+</head>
+
+<body>
+  <main>
+    <center>
+
+      <!--Navbarrrrr-->
+      <nav>
+        <div class="nav-wrapper indigo lighten-1">
+          <a href="servicios.html" class="brand-logo left white-text" id="logo">PoliBooking</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger" id="menuMobil"><i class="material-icons" >menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="http://smartcampus.poligran.edu.co" target="_blank" class="white-text">Smart Campus</a></li>
+            <li><a href="https://elearn.poligran.edu.co" target="_blank" class="white-text">Moodle</a></li>
+            <li><a href="http://login.microsoftonline.com/" target="_blank" class="white-text">Correo</a></li>
+            <li><a href="principal.html" class="white-text">Salir</a></li>
+          </ul>
+
+          <ul class="sidenav indigo darken-1" id="mobile-demo">
+            <li disabled><a href="#" class="grey-text" disabled>Escoje una opcion</a></li>
+            <li><a href="http://smartcampus.poligran.edu.co" target="_blank" class="white-text">Smart Campus</a></li>
+            <li><a href="https://elearn.poligran.edu.co" target="_blank" class="white-text">Moodle</a></li>
+            <li><a href="http://login.microsoftonline.com/" target="_blank" class="white-text">Correo</a></li>
+            <li><a href="principal.html" class="white-text">Salir</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!--Imagen del centro biblioteca-->
+      <div class="row">
+        <div class="col"></div><div class="col"></div>
+        <div class="col"></div><div class="col"></div>
+        <div class="col s12 m6 l5">
+          <div class="card large grey lighten-4 row" id="ser" style="float: center">
+            <div class="card-image">
+              <div class="carousel">
+                <a class="carousel-item"><img src="imagenes/biblioteca.png"></a>
+                <a class="carousel-item"><img src="imagenes/noche.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/dia.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/logoPoli.png"></a>
+                <a class="carousel-item"><img src="imagenes/poli.png"></a>
+              </div>
+              <span class="card-title black-text"></span>
+            </div>
+            <div class="card-content">
+              <p style="font-size: 20px">
+                <strong>Biblioteca</strong><br> Aquí puedes solicitar un servicio dentro de la biblioteca del campus del poli.
+              </p>
+            </div>
+            <div class="card-action hoverable grey lighten-2">
+              <a href="#" class="indigo-text" id="sol">Solicitar Servicio</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col"></div>
+        <!--Imagen del centro Gimnasio-->
+        <div class="col s12 m6 l5 ">
+          <div class="card large grey lighten-4 row" id="ser" style="float: center">
+            <div class="card-image ">
+              <div class="carousel">
+                <a class="carousel-item"><img src="imagenes/gimnasio.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/noche.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/dia.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/logoPoli.png"></a>
+                <a class="carousel-item"><img src="imagenes/poli.png"></a>
+              </div>
+              <span class="card-title black-text"></span>
+            </div>
+            <div class="card-content">
+              <p style="font-size: 20px">
+                <strong>Gimnasio</strong><br> Aquí puedes solicitar un servicio dentro del gimnasio del campus del poli.
+              </p>
+            </div>
+            <div class="card-action hoverable grey lighten-2">
+              <a href="#" class="indigo-text" id="sol">Solicitar Servicio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </center>
+  </main>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.sidenav').sidenav();
+    });
+    $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+    $('.carousel').carousel({
+      padding: 200
+    });
+    autoplay()
+    function autoplay() {
+      $('.carousel').carousel('next');
+      setTimeout(autoplay, 3000);
+    }
+  </script>
+</body>
+
+</html>

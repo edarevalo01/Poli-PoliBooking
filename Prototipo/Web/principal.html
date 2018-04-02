@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>PoliBooking</title>
   <link rel="stylesheet" href="css/materialize.min.css">
-  <link rel="stylesheet" href="principal.css">
+  <link rel="stylesheet" href="css/principal.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
     <center>
 
       <!--Imagen de PoliBooking (Banner)-->
-      <a href="principal.html"><img class="responsive-img" style="width: 550px;" src="poli.png"/></a>
+      <a href="principal.html"><img class="responsive-img" style="width: 550px;" src="imagenes/poli.png"/></a>
 
       <!--Subtitulo abajo del banner-->
       <h5 class="teal-text" id="subtitulo">Ingresa tu codigo y contraseña para entrar al sitio</h5>
@@ -35,14 +35,16 @@
             <!--Ingreso codigo-->
             <div class='row'>
               <div class='input-field col s12'>
+                <i class="mdi-action-account-circle prefix"></i>
                 <input class='validate' type='text' name='clave' id='clave' />
-                <label>Codigo</label>
+                <label for="clave">Codigo</label>
               </div>
             </div>
 
             <div class='row'>
               <!--Ingreso de contrasena-->
               <div class='input-field col s12'>
+                <i class="mdi-action-https prefix"></i>
                 <input class='validate' type='password' name='password' id='password' />
                 <label for='password'>Contraseña</label>
               </div>
@@ -71,7 +73,7 @@
           <a class='pink-text-1' href='ayuda.html'><b></br></br></br>'  Ayuda</b></a>
         </label>
         <label style='float: right;'>
-          <a href="www.poli.edu.co"><img class="responsive-img" style="width: 200px;" src="logoPoli.png"/></a>
+          <a href="http://www.poli.edu.co/" target="_blank"><img class="responsive-img" style="width: 200px;" src="imagenes/logoPoli.png"/></a>
         </label>
       </div>
 
@@ -82,6 +84,11 @@
   <!--script src="neww.js"></script-->
   <script src="js/jquery.js"></script>
   <script src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+  </script>
 
 </body>
 
