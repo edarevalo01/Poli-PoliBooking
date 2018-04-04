@@ -36,18 +36,23 @@
       </nav>
 
       <!--Imagen del centro biblioteca-->
-      <div class="row">
-        <div class="col"></div><div class="col"></div>
-        <div class="col"></div><div class="col"></div>
+      <div class="row z-depth-3">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
         <div class="col s12 m6 l5">
           <div class="card large grey lighten-4 row" id="ser" style="float: center">
             <div class="card-image">
               <div class="carousel">
-                <a class="carousel-item"><img src="imagenes/biblioteca.png"></a>
-                <a class="carousel-item"><img src="imagenes/noche.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/dia.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/logoPoli.png"></a>
-                <a class="carousel-item"><img src="imagenes/poli.png"></a>
+                <a class="carousel-item"><img src="imagenes/bib1.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/bib2.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/bib3.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/bib4.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/bib5.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/bib6.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/bib7.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/bib8.jpg"></a>
               </div>
               <span class="card-title black-text"></span>
             </div>
@@ -65,15 +70,17 @@
         <div class="col"></div>
 
         <!--Imagen del centro Gimnasio-->
-        <div class="col s12 m6 l5 ">
+        <div class="col s12 m6 l5">
           <div class="card large grey lighten-4 row" id="ser" style="float: center">
-            <div class="card-image ">
+            <div class="card-image">
               <div class="carousel">
-                <a class="carousel-item"><img src="imagenes/gimnasio.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/noche.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/dia.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/logoPoli.png"></a>
-                <a class="carousel-item"><img src="imagenes/poli.png"></a>
+                <a class="carousel-item"><img src="imagenes/gim1.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/gim2.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/gim3.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/gim4.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/gim5.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/gim6.jpg"></a>
+                <a class="carousel-item"><img src="imagenes/gim7.jpg"></a>
               </div>
               <span class="card-title black-text"></span>
             </div>
@@ -92,19 +99,48 @@
     </center>
   </main>
 
+  <footer class="page-footer grey lighten-3 z-depth-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l7 s12">
+          <h5 class="indigo-text text-darken-4" id="polifooterserv">PoliBooking</h5>
+          <label style='float: right;'>
+            <a href="http://www.poli.edu.co/" target="_blank"><img class="responsive-img" style="width: 200px;" src="imagenes/logoPoli.png"/></a>
+          </label>
+          <p class="black-text text-lighten-4">Acá va una descripción sobre la app <br> o las cosas legales o algo así, sólo quiero <br> llenar espacio para ver como se ve.</p>
+        </div>
+        <div class="col l2 offset-l3 s12">
+          <h5 class="black-text">Redes</h5>
+          <ul>
+            <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">linked_camera</i>Instagram</a></li>
+
+            <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">dashboard</i>Twitter</a></li>
+
+            <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">public</i>Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright z-depth-5 grey lighten-1">
+      <div class="container black-text">
+        © 2018 Copyright PoliBooking
+        <a class="indigo-text right" href="ayuda.html">Ayuda</a>
+      </div>
+    </div>
+  </footer>
+
   <script src="js/jquery.js"></script>
   <script src="js/materialize.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       $('.sidenav').sidenav();
-    });
-    $(document).ready(function(){
       $('.carousel').carousel();
     });
     $('.carousel').carousel({
       padding: 200
     });
     autoplay()
+
     function autoplay() {
       $('.carousel').carousel('next');
       setTimeout(autoplay, 3000);

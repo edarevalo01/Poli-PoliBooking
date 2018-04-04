@@ -44,3 +44,9 @@ body {
 #ser{
   margin-top: 25px;
 }
+#polifooterserv{
+  font-family: After Night;
+  font-size: 45px;
+}
+.carousel .carousel-item {
+width:300px !important;}
