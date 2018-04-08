@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
-  <title>Servicios - PoliBooking</title>
+  <title>PoliBooking - Administrador</title>
   <link rel="stylesheet" href="css/materialize.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="css/servicios.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style type="text/css">
     body {
       background-image: url(imagenes/bib1.jpg);
@@ -23,9 +23,9 @@
     <center>
 
       <!--Navbarrrrr-->
-      <nav class="transparent z-depth-0">
-        <div class="nav-wrapper">
-          <a href="servicios.html" class="brand-logo left white-text" id="logo">PoliBooking</a>
+      <nav>
+        <div class="nav-wrapper indigo lighten-1">
+          <a href="servicios.html" class="brand-logo left white-text" id="logo">PoliBooking admin</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger" id="menuMobil"><i class="material-icons" >menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="http://smartcampus.poligran.edu.co" target="_blank" class="white-text"><i class="mdi-action-https prefix material-icons left">dashboard</i>Smart Campus</a></li>
@@ -43,66 +43,62 @@
           </ul>
         </div>
       </nav>
-      
-      <div class="row"></div><div class="row"></div>
-      <!--Imagen del centro biblioteca-->
-      <div class="row z-depth-3">
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col s12 m6 l5">
-          <div class="card large grey lighten-4 row" id="ser" style="float: center">
-            <div class="card-image">
-              <div class="carousel">
-                <a class="carousel-item"><img src="imagenes/bib1.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/bib2.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/bib3.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/bib4.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/bib5.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/bib6.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/bib7.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/bib8.jpg"></a>
-              </div>
-              <span class="card-title black-text"></span>
-            </div>
-            <div class="card-content">
-              <p style="font-size: 20px">
-                <strong>Biblioteca</strong><br> Aquí puedes solicitar un servicio dentro de la biblioteca del campus del poli.
-              </p>
-            </div>
-            <div class="card-action hoverable grey lighten-2">
-              <a href="#" class="indigo-text" id="solBib">Solicitar Servicio</a>
-            </div>
-          </div>
-        </div>
 
+      <div class="row">
+        <div class="row"></div>
         <div class="col"></div>
-
-        <!--Imagen del centro Gimnasio-->
-        <div class="col s12 m6 l5">
-          <div class="card large grey lighten-4 row" id="ser" style="float: center">
-            <div class="card-image">
-              <div class="carousel">
-                <a class="carousel-item"><img src="imagenes/gim1.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/gim2.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/gim3.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/gim4.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/gim5.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/gim6.jpg"></a>
-                <a class="carousel-item"><img src="imagenes/gim7.jpg"></a>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col s10 l8">
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header grey lighten-3"><i class="material-icons">filter_drama</i> <strong>Servicios en uso</strong> </div>
+              <div class="collapsible-body" id="colbody">
+                <span>Aca va una lista con los servicios en uso de bib*.</span> <br>
+                <span>Aca va una lista con los servicios en uso de Gym*.</span>
               </div>
-              <span class="card-title black-text"></span>
-            </div>
-            <div class="card-content">
-              <p style="font-size: 20px">
-                <strong>Gimnasio</strong><br> Aquí puedes solicitar un servicio dentro del gimnasio del campus del poli.
-              </p>
-            </div>
-            <div class="card-action hoverable grey lighten-2">
-              <a href="#" class="indigo-text" id="solGim">Solicitar Servicio</a>
-            </div>
-          </div>
+            </li>
+            <li>
+              <div class="collapsible-header grey lighten-3"><i class="material-icons">filter_drama</i> <strong>Eliminar servicio en uso</strong> </div>
+              <div class="collapsible-body" id="colbody">
+                <span>Aca va una lista con checkboxes de los servicios en uso de bib*.</span> <br>
+                <span>Aca va una lista con checkboxes de los servicios en uso de gym*.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header grey lighten-3"><i class="material-icons">filter_drama</i> <strong>Eliminar usuario</strong> </div>
+              <div class="collapsible-body" id="colbody">
+                <div class="row"></div>
+                <span>Ingrese el codigo del estudiante a eliminar.</span>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class='row'>
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class='input-field col s6'>
+                    <i class="mdi-action-https prefix material-icons left">account_circle</i>
+                    <input class='validate' type='text' name='codigo_eliminar' id='codigo_eliminar' />
+                    <label for="clave">Codigo</label>
+                  </div>
+                  <div class="row">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <a href="admin.html"><input type="button" name="btn_eliminar" value="Eliminar" class="col s2 z-depth-2 btn waves-effect indigo-text" id="btn_eliminar" onclick = "location='admin.html'"></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -123,9 +119,7 @@
           <h5 class="black-text">Redes</h5>
           <ul>
             <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">linked_camera</i>Instagram</a></li>
-
             <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">dashboard</i>Twitter</a></li>
-
             <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">public</i>Facebook</a></li>
           </ul>
         </div>
@@ -145,6 +139,7 @@
     $(document).ready(function() {
       $('.sidenav').sidenav();
       $('.carousel').carousel();
+      $('.collapsible').collapsible();
     });
     $('.carousel').carousel({
       padding: 200

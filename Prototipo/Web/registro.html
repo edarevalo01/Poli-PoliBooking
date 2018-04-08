@@ -6,14 +6,35 @@
   <title>Registro-PoliBooking</title>
   <link rel="stylesheet" href="css/materialize.min.css">
   <link rel="stylesheet" href="css/registro.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style type="text/css">
+    body {
+      background-image: url(imagenes/bib1.jpg);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: 1366px 900px;
+    }
+  </style>
 </head>
 
 <body>
   <main>
     <center>
-
       <!--Imagen de PoliBooking (Banner)-->
-      <a href="principal.html"><img class="responsive-img" style="width: 350px;" src="imagenes/poli.png"/></a>
+      <div class="navbar-fixed"><!--Esto es para dejar el titulo estatico-->
+        <nav class="transparent z-depth-0">
+          <div class="nav-wrapper">
+            <a href="principal.html" class="brand-logo center white-text" id="logo">PoliBooking</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+      </div>
+      <div class="row"></div>
 
       <!--Subtitulo abajo del banner-->
       <h5 class="teal-text" id="subtitulo">Ingresa tus datos</h5>
@@ -34,7 +55,8 @@
 
             <!--Ingreso codigo-->
             <div class='row'>
-              <div class='input-field col s12'>
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">image_aspect_ratio</i>
                 <input class='validate' type='text' name='codigo' id='codigo' />
                 <label for="codigo">Codigo de estudiante</label>
               </div>
@@ -42,7 +64,8 @@
 
             <!--Documento-->
             <div class='row'>
-              <div class='input-field col s12'>
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">perm_identity</i>
                 <input class='validate' type='text' name='documento' id='documento' />
                 <label for="documento">Numero de Documento</label>
               </div>
@@ -50,7 +73,8 @@
 
             <!--Nombre-->
             <div class='row'>
-              <div class='input-field col s12'>
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">perm_contact_calendar</i>
                 <input class='validate' type='text' name='nombre' id='nombre' />
                 <label for="nombre">Nombre</label>
               </div>
@@ -58,7 +82,8 @@
 
             <!--Apellido-->
             <div class='row'>
-              <div class='input-field col s12'>
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">perm_contact_calendar</i>
                 <input class='validate' type='text' name='apellido' id='apellido' />
                 <label for="apellido">Apellido</label>
               </div>
@@ -66,23 +91,26 @@
 
             <!--Email-->
             <div class='row'>
-             <div class='input-field col s12'>
-               <input class='validate' type='email' name='email' id='email' />
-               <label for='email'>E-Mail</label>
-             </div>
-           </div>
-
-           <!--Clave-->
-           <div class='row'>
-            <div class='input-field col s12'>
-              <input class='validate' type='password' name='password' id='password' />
-              <label for='email'>Contraseña</label>
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">mail_outline</i>
+                <input class='validate' type='email' name='email' id='email' />
+                <label for='email'>E-Mail</label>
+              </div>
             </div>
-          </div>
+
+            <!--Clave-->
+            <div class='row'>
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">lock</i>
+                <input class='validate' type='password' name='password' id='password' />
+                <label for='email'>Contraseña</label>
+              </div>
+            </div>
 
             <!--Semestre - Esto deberia ser una lista-->
             <div class="row">
-              <div class="input-field col s12">
+              <div class="input-field col s11">
+                <i class="mdi-action-https prefix material-icons right">school</i>
                 <select>
                   <option value="" disabled selected>Escoje una opcion</option>
                   <option value="1">1</option>
@@ -103,7 +131,8 @@
             <!--Jornada- Esto debe ser una lista desplegable-->
 
             <div class="row">
-              <div class="input-field col s12">
+              <div class="input-field col s11">
+                <i class="mdi-action-https prefix material-icons right">toll</i>
                 <select name="jornada">
                   <option value="" disabled selected>Escoje una opcion</option>
                   <option value="1" data-icon="imagenes/dia.jpg" class="left">Diurno</option>
@@ -115,7 +144,8 @@
 
             <!--Rol- Esto debe ser una lista desplegable-->
             <div class="row">
-              <div class="input-field col s12">
+              <div class="input-field col s11">
+                <i class="mdi-action-https prefix material-icons right">people_outline</i>
                 <select name="rol">
                   <option value="" disabled selected>Escoje una opcion</option>
                   <option value="1">Estudiante</option>
@@ -128,7 +158,7 @@
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='email' name='NaN' id='NaN'disabled  />
+                <input class='validate' type='email' name='NaN' id='NaN' disabled />
               </div>
 
               <!--Espacio-->
@@ -150,41 +180,41 @@
   </main>
 
 
-    <footer class="page-footer grey lighten-3 z-depth-4">
-      <div class="container">
-        <div class="row">
-          <div class="col l7 s12">
-            <h5 class="indigo-text text-darken-4" id="polifooterserv">PoliBooking</h5>
-            <label style='float: right;'>
+  <footer class="page-footer grey lighten-3 z-depth-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l7 s12">
+          <h5 class="indigo-text text-darken-4" id="polifooterserv">PoliBooking</h5>
+          <label style='float: right;'>
               <a href="http://www.poli.edu.co/" target="_blank"><img class="responsive-img" style="width: 200px;" src="imagenes/logoPoli.png"/></a>
             </label>
-            <p class="black-text text-lighten-4">Acá va una descripción sobre la app <br> o las cosas legales o algo así, sólo quiero <br> llenar espacio para ver como se ve.</p>
-          </div>
-          <div class="col l2 offset-l3 s12">
-            <h5 class="black-text">Redes</h5>
-            <ul>
-              <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">linked_camera</i>Instagram</a></li>
+          <p class="black-text text-lighten-4">Acá va una descripción sobre la app <br> o las cosas legales o algo así, sólo quiero <br> llenar espacio para ver como se ve.</p>
+        </div>
+        <div class="col l2 offset-l3 s12">
+          <h5 class="black-text">Redes</h5>
+          <ul>
+            <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">linked_camera</i>Instagram</a></li>
 
-              <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">dashboard</i>Twitter</a></li>
+            <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">dashboard</i>Twitter</a></li>
 
-              <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">public</i>Facebook</a></li>
-            </ul>
-          </div>
+            <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">public</i>Facebook</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-copyright z-depth-5 grey lighten-1">
-        <div class="container black-text">
-          © 2018 Copyright PoliBooking
-          <a class="indigo-text right" href="ayuda.html">Ayuda</a>
-        </div>
+    </div>
+    <div class="footer-copyright z-depth-5 grey lighten-1">
+      <div class="container black-text">
+        © 2018 Copyright PoliBooking
+        <a class="indigo-text right" href="ayuda.html">Ayuda</a>
       </div>
-    </footer>
+    </div>
+  </footer>
 
   <!--script src="neww.js"></script-->
   <script src="js/jquery.js"></script>
   <script src="js/materialize.min.js"></script>
   <script type="text/javascript">
-    $(document).ready(function(){
+    $(document).ready(function() {
       $('select').formSelect();
     });
   </script>

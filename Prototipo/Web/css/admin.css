@@ -7,7 +7,7 @@ main {
   flex: 1 0 auto;
 }
 body {
-  background: #fff;
+  background: #b7c6ec;
 }
 .input-field input[type=date]:focus+label,
 .input-field input[type=text]:focus+label,
@@ -22,24 +22,38 @@ body {
   border-bottom: 2px solid #e91e63;
   box-shadow: 15px solid rgb(0, 0, 0);
 }
-#btn_login {
-  color: white;
+#logo{
+  font-family: After Night;
+  font-weight: 400;
+  font-size: 45px;
+  position: relative;
+  left: 1em;
 }
-#subtitulo{
-  font-family: Footlight MT Light;
-  font-weight: 600;
+#menuMobil{
+ position: relative;
+ left: 14em;
 }
-#espacio{
-  color: white;
+#solBib{
+  font-family: Helvetica;
+  font-size: 20px;
+}
+#solGim{
+  font-family: Helvetica;
+  font-size: 20px;
+}
+#ser{
+  margin-top: 25px;
 }
 #polifooterserv{
   font-family: After Night;
   font-size: 45px;
 }
-#logo{
-  font-family: After Night;
-  font-weight: 400;
-  font-size: 100px;
-  position: absolute;
-  top: 0.4em;
+.carousel .carousel-item {
+width:300px !important;}
+
+#colbody{
+  background-color: white;
+}
+#btn_eliminar{
+  color: white;
 }
