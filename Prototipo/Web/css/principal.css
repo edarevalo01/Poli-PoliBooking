@@ -36,3 +36,10 @@ body {
   font-family: After Night;
   font-size: 45px;
 }
+#logo{
+  font-family: After Night;
+  font-weight: 400;
+  font-size: 150px;
+  position: absolute;
+  top: 0.4em;
+}
