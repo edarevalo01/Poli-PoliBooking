@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
 
@@ -48,6 +49,15 @@ public class Crud_bib {
 			e.printStackTrace();
 			return;
 		}
+		finally {
+			if(stm != null) {
+				try {
+					stm.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 	
 	public void retrieveUser(Usuario user) {
@@ -73,6 +83,15 @@ public class Crud_bib {
 			e.printStackTrace();
 			return;
 		}
+		finally {
+			if(stm != null) {
+				try {
+					stm.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 	
 	private void conect(String sentence) {
@@ -91,6 +110,15 @@ public class Crud_bib {
 		catch(Exception e) {
 			e.printStackTrace();
 			return;
+		}
+		finally {
+			if(stm != null) {
+				try {
+					stm.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 	

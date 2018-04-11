@@ -6,16 +6,16 @@
   <title>PoliBooking</title>
   <link rel="stylesheet" href="css/materialize.min.css">
   <link rel="stylesheet" href="css/principal.css">
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <style type="text/css">
-     body {
-       background-image: url(imagenes/bib1.jpg);
-       background-repeat: no-repeat;
-       background-position: top center;
-       background-attachment: fixed;
-       background-size: 1366px 900px;
-     }
-   </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style type="text/css">
+    body {
+      background-image: url(imagenes/bib1.jpg);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: 1366px 900px;
+    }
+  </style>
 </head>
 
 <body>
@@ -23,7 +23,14 @@
     <center>
 
       <!--Imagen de PoliBooking (Banner)-->
-      <a href="principal.html"><img class="responsive-img" style="width: 550px;" src="imagenes/poli.png"/></a>
+      <nav class="transparent z-depth-0">
+        <div class="nav-wrapper">
+          <a href="principal.html" class="brand-logo center white-text" id="logo">PoliBooking</a>
+        </div>
+      </nav>
+
+      <div class="row"></div><div class="row"></div><div class="row"></div><div class="row"></div>
+      <div class="row"></div><div class="row"></div><div class="row"></div>
 
       <!--Subtitulo abajo del banner-->
       <h5 class="teal-text" id="subtitulo">Ingresa tu codigo y contraseña para entrar al sitio</h5>
@@ -79,44 +86,44 @@
 
     </center>
   </main>
-    <div class="row"></div>
+  <div class="row"></div>
 
-    <footer class="page-footer grey lighten-3 z-depth-4">
-      <div class="container">
-        <div class="row">
-          <div class="col l7 s12">
-            <h5 class="indigo-text text-darken-4" id="polifooterserv">PoliBooking</h5>
-            <label style='float: right;'>
+  <footer class="page-footer grey lighten-3 z-depth-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l7 s12">
+          <h5 class="indigo-text text-darken-4" id="polifooterserv">PoliBooking</h5>
+          <label style='float: right;'>
               <a href="http://www.poli.edu.co/" target="_blank"><img class="responsive-img" style="width: 200px;" src="imagenes/logoPoli.png"/></a>
             </label>
-            <p class="black-text text-lighten-4">Acá va una descripción sobre la app <br> o las cosas legales o algo así, sólo quiero <br> llenar espacio para ver como se ve.</p>
-          </div>
-          <div class="col l2 offset-l3 s12">
-            <h5 class="black-text">Redes</h5>
-            <ul>
-              <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">linked_camera</i>Instagram</a></li>
+          <p class="black-text text-lighten-4">Acá va una descripción sobre la app <br> o las cosas legales o algo así, sólo quiero <br> llenar espacio para ver como se ve.</p>
+        </div>
+        <div class="col l2 offset-l3 s12">
+          <h5 class="black-text">Redes</h5>
+          <ul>
+            <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">linked_camera</i>Instagram</a></li>
 
-              <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">dashboard</i>Twitter</a></li>
+            <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">dashboard</i>Twitter</a></li>
 
-              <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">public</i>Facebook</a></li>
-            </ul>
-          </div>
+            <li><a class="black-text text-lighten-3" href="#!"><i class="mdi-action-https prefix material-icons">public</i>Facebook</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-copyright z-depth-5 grey lighten-1">
-        <div class="container black-text">
-          © 2018 Copyright PoliBooking
-          <a class="indigo-text right" href="ayuda.html">Ayuda</a>
-        </div>
+    </div>
+    <div class="footer-copyright z-depth-5 grey lighten-1">
+      <div class="container black-text">
+        © 2018 Copyright PoliBooking
+        <a class="indigo-text right" href="ayuda.html">Ayuda</a>
       </div>
-    </footer>
+    </div>
+  </footer>
 
 
   <!--script src="neww.js"></script-->
   <script src="js/jquery.js"></script>
   <script src="js/materialize.min.js"></script>
   <script type="text/javascript">
-    $(document).ready(function(){
+    $(document).ready(function() {
       $('select').formSelect();
     });
   </script>
