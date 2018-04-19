@@ -1,3 +1,5 @@
+package co.edu.poli.ing.polibooking;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -5,16 +7,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
 
-public class Crud_gym {
-
+public class CrudBib {
+	
 	private Statement stm;
-	private boolean []turno = new boolean[15];
-
-
-	public Crud_gym() {
+	private boolean[] cubs = new boolean[15];
+	
+	public CrudBib() {
 		llenarArr();
 	}
-
+	
 	private void llenarArr() {
 		try (Connection conec = DriverManager.getConnection("jdbc:mysql://localhost/Base_de_datos_PoliBooking", "root", "A1023954647*");){
 			Class.forName("com.mysql.jdbc.Driver");
@@ -23,7 +24,7 @@ public class Crud_gym {
 				ResultSet srt = stm.executeQuery("select * from solicitudserviciogimnasio");
 				while(srt.next()) {
 					String b = srt.getString(2);//Turn
-					turno[Integer.parseInt(b)-1] = true;
+					cubs[Integer.parseInt(b)-1] = true;
 				}
 			}
 			else return;
@@ -43,59 +44,34 @@ public class Crud_gym {
 		}
 
 	}
-
-	public void create(Usuario user) {
-		String tr = trn();
-		conect("INSERT INTO `base_de_datos_polibooking`.`solicitudserviciogimnasio` (`cod_usuario_gym`, `numero_turno`, `hora_inicio`, `hora_fin`)"
-				+ " VALUES ('"+user.getCode()+"', '"+tr+"', '"+horaIni()+"', '"+horaFin()+"');");
+	
+	public void create(Usuario user, String cubiculo) {
+		conect("INSERT INTO `base_de_datos_polibooking`.`solicitudserviciobiblioteca` (`cod_usuario_bib`, `numero_cubiculo`, `hora_inicio`, `hora_final`)"
+				+ " VALUES ('"+user.getCode()+"', '"+cubiculo+"', '"+horaIni()+"', '"+horaFin()+"');");
 	}
-
-	public void delete(Usuario user) {
-		try (Connection conec = DriverManager.getConnection("jdbc:mysql://localhost/Base_de_datos_PoliBooking", "root", "A1023954647*");){
-			Class.forName("com.mysql.jdbc.Driver");
-			if(conec != null) {
-				System.out.println(conec);
-				stm = conec.createStatement();
-				ResultSet srt = stm.executeQuery("select * from solicitudserviciogimnasio WHERE `cod_usuario_gym`='"+user.getCode()+"';");
-				while(srt.next()) {
-					String b = srt.getString(2);
-					turno[Integer.parseInt(b)-1] = false;
-				}
-				stm.executeUpdate("DELETE FROM `base_de_datos_polibooking`.`solicitudserviciogimnasio` WHERE `cod_usuario_gym`='"+user.getCode()+"';");
-			}
-			else return;
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-			return;
-		}
-		finally {
-			if(stm != null) {
-				try {
-					stm.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
-		}
+	
+	public void delete(String code) {
+		conect("DELETE FROM `base_de_datos_polibooking`.`solicitudserviciobiblioteca` WHERE `cod_usuario_bib`='"+code+"';");
 	}
-
-	//Creeria que esto ni siquiera se va a usar ._.
-	public void update(Usuario user) {
-		String tr = trn();
-		conect("UPDATE `base_de_datos_polibooking`.`solicitudserviciogimnasio` SET `numero_turno`='"+tr+"' WHERE `cod_usuario_gym`='"+user.getCode()+"';");
+	/**
+	 * @see La hora se mantiene porque solo esta cambiando de cubiculo..
+	 * @param user
+	 * @param nuevoCub
+	 */
+	public void update(String code, String nuevoCub) {
+		conect("UPDATE `base_de_datos_polibooking`.`solicitudserviciobiblioteca` SET `numero_cubiculo`='"+nuevoCub+"' WHERE `cod_usuario_bib`='"+code+"';");
 	}
-
+	
 	public void retrieveTable() {
 		try (Connection conec = DriverManager.getConnection("jdbc:mysql://localhost/Base_de_datos_PoliBooking", "root", "A1023954647*");){
 			Class.forName("com.mysql.jdbc.Driver");
 			if(conec != null) {
 				stm = conec.createStatement();
-				ResultSet srt = stm.executeQuery("select * from solicitudserviciogimnasio");
-				System.out.printf("%-13s%-11s%-25s%-13s\n", "Code", "Turno", "Start", "End");
+				ResultSet srt = stm.executeQuery("select * from solicitudserviciobiblioteca");
+				System.out.printf("%-13s%-11s%-25s%-13s\n", "Code", "Cubiculo", "Start", "End");
 				while(srt.next()) {
 					String a = srt.getString(1);//Code
-					String b = srt.getString(2);//Turn
+					String b = srt.getString(2);//Cub
 					String c = srt.getString(3);//Start
 					String d = srt.getString(4);//End
 					System.out.printf("%-13s%-11s%-25s%-13s\n", a, b, c, d);
@@ -117,29 +93,30 @@ public class Crud_gym {
 			}
 		}
 	}
-
-	public void retrieveUser(Usuario user) {
+	
+	public Biblioteca retrieveUser(String code) {
+		Biblioteca servicio = null;
 		try (Connection conec = DriverManager.getConnection("jdbc:mysql://localhost/Base_de_datos_PoliBooking", "root", "A1023954647*");){
 			Class.forName("com.mysql.jdbc.Driver");
 			if(conec != null) {
 				stm = conec.createStatement();
-				ResultSet srt = stm.executeQuery("select * from solicitudserviciogimnasio WHERE `cod_usuario_gym`='"+user.getCode()+"';");
-				System.out.printf("%-13s%-11s%-25s%-13s\n", "Code", "Turno", "Start", "End");
+				ResultSet srt = stm.executeQuery("select * from solicitudserviciobiblioteca WHERE `cod_usuario_bib`='"+code+"';");
+				System.out.printf("%-13s%-11s%-25s%-13s\n", "Code", "Cubiculo", "Start", "End");
 				while(srt.next()) {
-					String a = srt.getString(1);//Code
-					String b = srt.getString(2);//Turn
-					String c = srt.getString(3);//Start
-					String d = srt.getString(4);//End
-					System.out.printf("%-13s%-11s%-25s%-13s\n", a, b, c, d);
+					String codde = srt.getString(1);//Code
+					String cubicle = srt.getString(2);//Cub
+					String hourStart = srt.getString(3);//Start
+					String hourEnd = srt.getString(4);//End
+					System.out.printf("%-13s%-11s%-25s%-13s\n", codde, cubicle, hourStart, hourEnd);
+					servicio = new Biblioteca(codde, cubicle, hourStart, hourEnd);
 				}
 			}
 			else {
-				return;
+				return servicio;
 			}
 		}
 		catch(Exception e) {
 			e.printStackTrace();
-			return;
 		}
 		finally {
 			if(stm != null) {
@@ -150,12 +127,14 @@ public class Crud_gym {
 				}
 			}
 		}
+		return servicio;
 	}
-
+	
 	private void conect(String sentence) {
 		try (Connection conec = DriverManager.getConnection("jdbc:mysql://localhost/Base_de_datos_PoliBooking", "root", "A1023954647*");){
 			Class.forName("com.mysql.jdbc.Driver");
 			if(conec != null) {
+				System.out.println(conec);
 				stm = conec.createStatement();
 				stm.executeUpdate(sentence);
 			}
@@ -178,7 +157,7 @@ public class Crud_gym {
 			}
 		}
 	}
-
+	
 	private String horaIni() {
 		Date d = new Date();
 		String comp = d.toString();
@@ -190,7 +169,7 @@ public class Crud_gym {
 		String sec = comp.substring(17, 19);
 		return ano+"-"+len(mes(mes))+"-"+dia+" "+hora+":"+min+":"+sec;
 	}
-
+	
 	private String horaFin() {
 		Date d = new Date();
 		String comp = d.toString();
@@ -202,7 +181,7 @@ public class Crud_gym {
 		String sec = comp.substring(17, 19);
 		return ano+"-"+len(mes(mes))+"-"+dia+" "+horaMas(hora)+":"+min+":"+sec;
 	}
-
+	
 	private String horaMas(String hora) {
 		if(hora.equals("22")) return "00";
 		else if(hora.equals("23"))return "01";
@@ -213,7 +192,7 @@ public class Crud_gym {
 		if(any.length()==1) return "0"+any;
 		else return any;
 	}
-
+	
 	private String mes(String mes) {
 		switch (mes) {
 		case "jan": return "01";
@@ -231,11 +210,11 @@ public class Crud_gym {
 		}
 		return "";
 	}
-
+	
 	private String trn() {
-		for (int i = 0; i < turno.length; i++) {
-			if(turno[i] == false) {
-				turno[i] = true;
+		for (int i = 0; i < cubs.length; i++) {
+			if(cubs[i] == false) {
+				cubs[i] = true;
 				return String.valueOf(i+1);
 			}
 		}

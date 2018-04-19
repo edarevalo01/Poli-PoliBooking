@@ -1,3 +1,5 @@
+package co.edu.poli.ing.polibooking;
+
 /**
  * @category Clase para crear un nuevo participante
  */
