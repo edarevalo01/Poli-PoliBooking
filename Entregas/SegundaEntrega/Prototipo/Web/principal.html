@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>PoliBooking</title>
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/principal.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style type="text/css">
+    body {
+      background-image: url(imagenes/bib1.jpg);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: 1366px 900px;
+    }
+  </style>
+  <script src="js/jquery.js"></script>
+</head>
+
+<body>
+  <main>
+    <center>
+
+      <!--Imagen de PoliBooking (Banner)-->
+      <nav class="transparent z-depth-0">
+        <div class="nav-wrapper">
+          <a href="principal.html" class="brand-logo center white-text" id="logo">PoliBooking</a>
+        </div>
+      </nav>
+
+      <div class="row"></div><div class="row"></div><div class="row"></div><div class="row"></div>
+      <div class="row"></div><div class="row"></div><div class="row"></div>
+
+      <!--Subtitulo abajo del banner-->
+      <h5 class="teal-text" id="subtitulo">Ingresa tu codigo y contraseña para entrar al sitio</h5>
+      <div class="section"></div>
+      <!--Algo asi como un salto de linea jaja-->
+
+      <div class="container">
+        <!--Diseno del contenedor-->
+        <div class="z-depth-4 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+          <!--Tamano del contenedor-->
+          <form class="col s12" method="post">
+
+            <!--Tamano del contenedor-->
+            <div class='row'>
+              <div class='col s12'></div>
+            </div>
+
+            <!--Ingreso codigo-->
+            <div class='row'>
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">account_circle</i>
+                <input class='validate' type='text' name='codigo' id='codigo' />
+                <label for="clave">Codigo</label>
+              </div>
+            </div>
+
+            <div class='row'>
+              <!--Ingreso de contrasena-->
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">lock</i>
+                <input class='validate' type='password' name='password' id='password' />
+                <label for='password'>Contraseña</label>
+              </div>
+
+              <!--Olvido de contrasena-->
+              <label style='float: right;'>
+								<a class='pink-text-1' href='restablecer.html'><b>¿Olvidaste tu contraseña?</b></a>
+							</label>
+
+              <!--Boton entrar-->
+              <div class='row'>
+                <a href="servicios.html"><input type="button" name="btn_login" value="Entrar" class="col s6 z-depth-2 btn waves-effect indigo-text" id="btn_login" onclick = "location='servicios.html'"></a>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <!--Parte de registrarse-->
+      <a href="registro.html">Registrarse</a>
+
+    </center>
+  </main>
+  <div class="row"></div>
+
+  <footer class="page-footer grey lighten-3 z-depth-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l7 s12">
+          <h5 class="indigo-text text-darken-4" id="polifooterserv">PoliBooking</h5>
+          <label style='float: right;'>
+              <a href="http://www.poli.edu.co/" target="_blank"><img class="responsive-img" style="width: 200px;" src="imagenes/logoPoli.png"/></a>
+            </label>
+            <p class="black-text text-lighten-4">En esta plataforma podrás de una manera muy fácil agendar turnos para los servicios que requieras en la Biblioteca y el Gimnasio de la universidad.</p>
+          </div>
+          <div class="col l2 offset-l3 s12">
+            <h5 class="black-text">Redes Sociales</h5>
+            <ul>
+              <li><a class="black-text text-lighten-3" href="https://www.instagram.com/ContactPoliBooking/"><i class="mdi-action-https prefix material-icons">linked_camera</i>Instagram</a></li>
+
+            <li><a class="black-text text-lighten-3" href="https://twitter.com/PoliBooking"><i class="mdi-action-https prefix material-icons">dashboard</i>Twitter</a></li>
+
+            <li><a class="black-text text-lighten-3" href="https://www.facebook.com/PoliBooking-1671225612924986/"><i class="mdi-action-https prefix material-icons">public</i>Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright z-depth-5 grey lighten-1">
+      <div class="container black-text">
+        © 2018 Copyright PoliBooking
+        <a class="indigo-text right" href="ayuda.html">Ayuda</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--script src="neww.js"></script-->
+
+  <script src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('select').formSelect();
+    });
+  </script>
+
+</body>
+
+</html>

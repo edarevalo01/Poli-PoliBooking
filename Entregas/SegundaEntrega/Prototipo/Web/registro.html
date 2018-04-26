@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registro-PoliBooking</title>
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/registro.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style type="text/css">
+    body {
+      background-image: url(imagenes/bib1.jpg);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: 1366px 900px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <center>
+      <!--Imagen de PoliBooking (Banner)-->
+      <div class="navbar-fixed"><!--Esto es para dejar el titulo estatico-->
+        <nav class="transparent z-depth-0">
+          <div class="nav-wrapper">
+            <a href="principal.html" class="brand-logo center white-text" id="logo">PoliBooking</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+      </div>
+      <div class="row"></div>
+
+      <!--Subtitulo abajo del banner-->
+      <h5 class="teal-text" id="subtitulo">Ingresa tus datos</h5>
+      <div class="section"></div>
+      <!--Algo asi como un salto de linea jaja-->
+
+      <div class="container">
+        <!--Diseno del contenedor-->
+        <div class="z-depth-4 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+          <!--Tamano del contenedor-->
+          <form class="col s12" method="post">
+
+            <!--Tamano del contenedor-->
+            <div class='row'>
+              <div class='col s12'></div>
+            </div>
+
+            <!--Ingreso codigo-->
+            <div class='row'>
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">image_aspect_ratio</i>
+                <input class='validate' type='text' name='codigo' id='codigo' />
+                <label for="codigo">Codigo de estudiante</label>
+              </div>
+            </div>
+
+            <!--Documento-->
+            <div class='row'>
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">perm_identity</i>
+                <input class='validate' type='text' name='documento' id='documento' />
+                <label for="documento">Numero de Documento</label>
+              </div>
+            </div>
+
+            <!--Nombre-->
+            <div class='row'>
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">perm_contact_calendar</i>
+                <input class='validate' type='text' name='nombre' id='nombre' />
+                <label for="nombre">Nombre</label>
+              </div>
+            </div>
+
+            <!--Apellido-->
+            <div class='row'>
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">perm_contact_calendar</i>
+                <input class='validate' type='text' name='apellido' id='apellido' />
+                <label for="apellido">Apellido</label>
+              </div>
+            </div>
+
+            <!--Email-->
+            <div class='row'>
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">mail_outline</i>
+                <input class='validate' type='email' name='email' id='email' />
+                <label for='email'>E-Mail</label>
+              </div>
+            </div>
+
+            <!--Clave-->
+            <div class='row'>
+              <div class='input-field col s11'>
+                <i class="mdi-action-https prefix material-icons left">lock</i>
+                <input class='validate' type='password' name='password' id='password' />
+                <label for='email'>Contraseña</label>
+              </div>
+            </div>
+
+            <!--Semestre - Esto deberia ser una lista-->
+            <div class="row">
+              <div class="input-field col s11">
+                <i class="mdi-action-https prefix material-icons right">school</i>
+                <select>
+                  <option value="" disabled selected>Escoje una opcion</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <label>Semestre</label>
+              </div>
+            </div>
+
+            <!--Jornada- Esto debe ser una lista desplegable-->
+
+            <div class="row">
+              <div class="input-field col s11">
+                <i class="mdi-action-https prefix material-icons right">toll</i>
+                <select name="jornada">
+                  <option value="" disabled selected>Escoje una opcion</option>
+                  <option value="1" data-icon="imagenes/dia.jpg" class="left">Diurno</option>
+                  <option value="2" data-icon="imagenes/noche.jpg" class="left">Nocturno</option>
+                </select>
+                <label>Jornada</label>
+              </div>
+            </div>
+
+            <!--Rol- Esto debe ser una lista desplegable-->
+            <div class="row">
+              <div class="input-field col s11">
+                <i class="mdi-action-https prefix material-icons right">people_outline</i>
+                <select name="rol">
+                  <option value="" disabled selected>Escoje una opcion</option>
+                  <option value="1">Estudiante</option>
+                  <option value="2">Docente</option>
+                  <option value="3">Administrativo</option>
+                </select>
+                <label>Rol</label>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='email' name='NaN' id='NaN' disabled />
+              </div>
+
+              <!--Espacio-->
+              <label style='float: right;'>
+								<a class='pink-text-1' id="espacio"><b>________________________________</b></a>
+							</label>
+
+              <!--Boton entrar-->
+              <div class='row'>
+                <a href="principal.html"><input type="button" name="btn_login" value="Enviar" class="col s12 z-depth-2 btn waves-effect indigo-text" id="btn_login" onclick = "location='servicios.html'"></a>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </center>
+  </main>
+
+
+  <footer class="page-footer grey lighten-3 z-depth-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l7 s12">
+          <h5 class="indigo-text text-darken-4" id="polifooterserv">PoliBooking</h5>
+          <label style='float: right;'>
+              <a href="http://www.poli.edu.co/" target="_blank"><img class="responsive-img" style="width: 200px;" src="imagenes/logoPoli.png"/></a>
+            </label>
+          <p class="black-text text-lighten-4">En esta plataforma podrás de una manera muy fácil agendar turnos para los servicios que requieras en la Biblioteca y el Gimnasio de la universidad.</p>
+        </div>
+        <div class="col l2 offset-l3 s12">
+          <h5 class="black-text">Redes Sociales</h5>
+          <ul>
+            <li><a class="black-text text-lighten-3" href="https://www.instagram.com/ContactPoliBooking/"><i class="mdi-action-https prefix material-icons">linked_camera</i>Instagram</a></li>
+
+            <li><a class="black-text text-lighten-3" href="https://twitter.com/PoliBooking"><i class="mdi-action-https prefix material-icons">dashboard</i>Twitter</a></li>
+
+            <li><a class="black-text text-lighten-3" href="https://www.facebook.com/PoliBooking-1671225612924986/"><i class="mdi-action-https prefix material-icons">public</i>Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright z-depth-5 grey lighten-1">
+      <div class="container black-text">
+        © 2018 Copyright PoliBooking
+        <a class="indigo-text right" href="ayuda.html">Ayuda</a>
+      </div>
+    </div>
+  </footer>
+
+  <!--script src="neww.js"></script-->
+  <script src="js/jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('select').formSelect();
+    });
+  </script>
+
+</body>
+
+</html>

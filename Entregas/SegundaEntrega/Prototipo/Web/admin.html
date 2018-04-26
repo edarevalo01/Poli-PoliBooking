@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>PoliBooking - Administrador</title>
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style type="text/css">
+    body {
+      background-image: url(imagenes/bib1.jpg);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: 1366px 900px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <center>
+
+      <!--monica es fea-->
+      <nav>
+        <div class="nav-wrapper indigo lighten-1">
+          <a href="servicios.html" class="brand-logo left white-text" id="logo">PoliBooking admin</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger" id="menuMobil"><i class="material-icons" >menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="http://smartcampus.poligran.edu.co" target="_blank" class="white-text"><i class="mdi-action-https prefix material-icons left">dashboard</i>Smart Campus</a></li>
+            <li><a href="https://elearn.poligran.edu.co" target="_blank" class="white-text"><i class="mdi-action-https prefix material-icons left">chrome_reader_mode</i>Moodle</a></li>
+            <li><a href="http://login.microsoftonline.com/" target="_blank" class="white-text"><i class="mdi-action-https prefix material-icons left">email</i>Correo</a></li>
+            <li><a href="principal.html" class="white-text"><i class="mdi-action-https prefix material-icons left">reply</i>Salir</a></li>
+          </ul>
+
+          <ul class="sidenav indigo darken-1" id="mobile-demo">
+            <li disabled><a href="#" class="grey-text" disabled>Escoje una opcion</a></li>
+            <li><a href="http://smartcampus.poligran.edu.co" target="_blank" class="white-text left"><i class="mdi-action-https prefix material-icons left">dashboard</i>Smart Campus</a></li>
+            <li><a href="https://elearn.poligran.edu.co" target="_blank" class="white-text left"><i class="mdi-action-https prefix material-icons left">chrome_reader_mode</i>Moodle</a></li>
+            <li><a href="http://login.microsoftonline.com/" target="_blank" class="white-text left"><i class="mdi-action-https prefix material-icons left">email</i>Correo</a></li>
+            <li><a href="principal.html" class="white-text left"><i class="mdi-action-https prefix material-icons left">reply</i>Salir</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="row">
+        <div class="row"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col s10 l8">
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header grey lighten-3"><i class="material-icons">filter_drama</i> <strong>Servicios en uso</strong> </div>
+              <div class="collapsible-body" id="colbody">
+                <span>Aca va una lista con los servicios en uso de bib*.</span> <br>
+                <span>Aca va una lista con los servicios en uso de Gym*.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header grey lighten-3"><i class="material-icons">filter_drama</i> <strong>Eliminar servicio en uso</strong> </div>
+              <div class="collapsible-body" id="colbody">
+                <span>Aca va una lista con checkboxes de los servicios en uso de bib*.</span> <br>
+                <span>Aca va una lista con checkboxes de los servicios en uso de gym*.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header grey lighten-3"><i class="material-icons">filter_drama</i> <strong>Eliminar usuario</strong> </div>
+              <div class="collapsible-body" id="colbody">
+                <div class="row"></div>
+                <span>Ingrese el codigo del estudiante a eliminar.</span>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class='row'>
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class='input-field col s6'>
+                    <i class="mdi-action-https prefix material-icons left">account_circle</i>
+                    <input class='validate' type='text' name='codigo_eliminar' id='codigo_eliminar' />
+                    <label for="clave">Codigo</label>
+                  </div>
+                  <div class="row">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <a href="admin.html"><input type="button" name="btn_eliminar" value="Eliminar" class="col s2 z-depth-2 btn waves-effect indigo-text" id="btn_eliminar" onclick = "location='admin.html'"></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </center>
+  </main>
+
+  <footer class="page-footer grey lighten-3 z-depth-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l7 s12">
+          <h5 class="indigo-text text-darken-4" id="polifooterserv">PoliBooking</h5>
+          <label style='float: right;'>
+            <a href="http://www.poli.edu.co/" target="_blank"><img class="responsive-img" style="width: 200px;" src="imagenes/logoPoli.png"/></a>
+          </label>
+          <p class="black-text text-lighten-4">En esta plataforma podrás de una manera muy fácil agendar turnos para los servicios que requieras en la Biblioteca y el Gimnasio de la universidad.</p>
+        </div>
+        <div class="col l2 offset-l3 s12">
+          <h5 class="black-text">Redes Sociales</h5>
+          <ul>
+            <li><a class="black-text text-lighten-3" href="https://www.instagram.com/ContactPoliBooking/"><i class="mdi-action-https prefix material-icons">linked_camera</i>Instagram</a></li>
+            <li><a class="black-text text-lighten-3" href="https://twitter.com/PoliBooking"><i class="mdi-action-https prefix material-icons">dashboard</i>Twitter</a></li>
+            <li><a class="black-text text-lighten-3" href="https://www.facebook.com/PoliBooking-1671225612924986/"><i class="mdi-action-https prefix material-icons">public</i>Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright z-depth-5 grey lighten-1">
+      <div class="container black-text">
+        © 2018 Copyright PoliBooking
+        <a class="indigo-text right" href="ayuda.html">Ayuda</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.sidenav').sidenav();
+      $('.carousel').carousel();
+      $('.collapsible').collapsible();
+    });
+    $('.carousel').carousel({
+      padding: 200
+    });
+    autoplay()
+
+    function autoplay() {
+      $('.carousel').carousel('next');
+      setTimeout(autoplay, 3000);
+    }
+  </script>
+</body>
+
+</html>

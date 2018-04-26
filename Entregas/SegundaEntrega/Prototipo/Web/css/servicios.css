@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+.input-field input[type=date]:focus+label,
+.input-field input[type=text]:focus+label,
+.input-field input[type=email]:focus+label,
+.input-field input[type=password]:focus+label {
+  color: #e91e63;
+}
+.input-field input[type=date]:focus,
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus {
+  border-bottom: 2px solid #e91e63;
+  box-shadow: 15px solid rgb(0, 0, 0);
+}
+#logo{
+  font-family: After Night;
+  font-weight: 400;
+  font-size: 60px;
+  position: relative;
+  top: 0.2em;
+  left: 0.8em;
+}
+#menuMobil{
+ position: relative;
+ left: 14em;
+}
+#solBib{
+  font-family: Helvetica;
+  font-size: 20px;
+}
+#solGim{
+  font-family: Helvetica;
+  font-size: 20px;
+}
+#ser{
+  margin-top: 25px;
+}
+#polifooterserv{
+  font-family: After Night;
+  font-size: 45px;
+}
+.carousel .carousel-item {
+width:300px !important;}
